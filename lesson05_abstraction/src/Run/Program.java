@@ -94,8 +94,8 @@ public class Program {
 		ArrayList<News> results = new ArrayList<News>();
 		Scanner scn = new Scanner(System.in);
 		
-		boolean isLoop = true;
 		int count = newslist.size();
+		int index = 1;
 		do {
 			System.out.println("Mời nhập Title:");
 			String title = scn.nextLine();
@@ -106,14 +106,34 @@ public class Program {
 			System.out.println("Mời nhập Content:");
 			String content = scn.nextLine();
 			System.out.println("Mời nhập vào các điểm rating, cách nhau bởi dấu phảy:");
-			String rates = scn.nextLine();
+			String rates = scn.nextLine(); // "1,2,3,4,5,6"
+			System.out.println();
+			// Convert rates to int[]
+			String[] stringRates = rates.split(","); // {"1","2","3","4","5"} -> {1,2,3,4,5}
+			int[] intRates = new int[stringRates.length];
+			for (int i = 0; i < stringRates.length; i++) {
+				int convertedNumber = Integer.parseInt(stringRates[i]);
+				intRates[i] = convertedNumber;
+			}
+			// Create instance
+			News news = new News(count + index, title, publishDate, author, content, 0.0f);
+			news.calculate(intRates);
+			// push into results
+			results.add(news);
+			System.out.println("Success !");
+			System.out.println();
+			System.out.println("Bạn có muốn tiếp tục tạo News ?");
+			System.out.println("Y - yes");
+			System.out.println("N - no");
+			String answer = scn.nextLine();
+			System.out.println();
+			if (answer.toLowerCase().equals("y")) { // Y -> true | y -> true
+				index ++;
+			} else {
+				return results;
+			}
 			
-			
-		} while (isLoop);
-		
-		
-		
-		return null;
+		} while (true);
 	}
 
 }
