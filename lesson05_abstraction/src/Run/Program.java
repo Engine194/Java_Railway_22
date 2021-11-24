@@ -62,12 +62,24 @@ public class Program {
 				case 1:
 					System.out.println("Bạn đã chọn chức năng 1. Insert news");
 					ArrayList<News> results = insertNews(newslist);
+					for (News news : results) {
+						newslist.add(news);
+					}
 					break;
 				case 2:
 					System.out.println("Bạn đã chọn chức năng 2. View list news");
+					for (News news : newslist) {
+						System.out.println(news.toString());
+					}
 					break;
 				case 3:
+					// Tính điểm trung bình của tất cả các tin tức
 					System.out.println("Bạn đã chọn chức năng 3. Average rate");
+					float totalRating = 0.0f;
+					for (News news : newslist) {
+						totalRating += news.getAverageRate();
+					}
+					System.out.println("Average rate = " + totalRating / (newslist.size() > 0 ? newslist.size() : 1));
 					break;
 				default:
 					System.out.println("Exit!");
