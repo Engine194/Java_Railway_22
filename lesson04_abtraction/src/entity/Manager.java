@@ -13,9 +13,9 @@ public class Manager extends User {
 //		super();
 //	}
 	
-	@Override
-	public double calculatePay() {
-		return this.getSalaryRatio() * 520;
-	}
+//	@Override
+//	public double calculatePay() {
+//		return this.getSalaryRatio() * 520;
+//	}
 
 }

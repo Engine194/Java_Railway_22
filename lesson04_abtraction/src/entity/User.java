@@ -1,6 +1,6 @@
 package entity;
 
-public abstract class User {
+public class User {
  	private	String name;
  	private	double salaryRatio;
 	
@@ -35,10 +35,14 @@ public abstract class User {
 		return "User [name=" + name + ", salaryRatio=" + salaryRatio + "]";
 	}
 	
-	public abstract double calculatePay();
+//	public abstract double calculatePay();
 	
 	public void displayInfor() {
 		System.out.println(this.toString());
+		if (this instanceof User) {
+			System.out.println("this là một instance của User");
+			
+		}
 	}
  	
 }

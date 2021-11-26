@@ -13,9 +13,9 @@ public class Waiter extends User {
 		super();
 	}
 	
-	@Override
-	public double calculatePay() {
-		return this.getSalaryRatio() * 220;
-	}
+//	@Override
+//	public double calculatePay() {
+//		return this.getSalaryRatio() * 220;
+//	}
 
 }

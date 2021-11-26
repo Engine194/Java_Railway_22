@@ -8,35 +8,8 @@ import entity.News;
 public class Program {
 
 	public static void main(String[] args) {
-//		News news = new News();
-//		Scanner scn = new Scanner(System.in);
-//		System.out.println("Mời nhập vào các điểm rating, cách nhau bởi dấu phảy");
-//		String input = scn.nextLine();
-//		
-//		// Xử lý string
-//		
-//		String[] inputSplited = input.split(","); // {"1","2","3","4","5"} -> {1,2,3,4,5}
-//		
-//		int[] results = new int[inputSplited.length];
-////		for (int i : results) {
-////			System.out.println(i);
-////		}
-//		
-//		for (int i = 0; i < inputSplited.length; i++) {
-//			int convertedNumber = Integer.parseInt(inputSplited[i]);
-//			results[i] = convertedNumber;
-//		}
-//		
-////		for (int i : results) {
-////			System.out.println(i);
-////		}
-//		
-//		System.out.println(news.getAuthor());
-//		
-//		news.calculate(results);
-//		
-//		System.out.println(news.getAverageRate());		
-		
+//		News news = new News(1, "title1", "24.11.2021", "engine194", "content1", 0.0f);
+//		System.out.println(news.toString());
 		
 		myNews();
 		

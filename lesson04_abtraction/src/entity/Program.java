@@ -7,12 +7,17 @@ public class Program {
 		Manager manager = new Manager("Tuan Anh", 6.9);
 		Waiter waiter = new Waiter("Hoai Le", 0.7);
 		
+		User user = new User("Engine194", 0.5d);
+		Department department = new Department();
+		 
+		
+		user.displayInfor();
 		employee.displayInfor();
 		manager.displayInfor();
 		waiter.displayInfor();
-		System.out.println("Luong cua " + employee.getName() + " la: " + employee.calculatePay());
-		System.out.println("Luong cua " + manager.getName() + " la: " + manager.calculatePay());
-		System.out.println("Luong cua " + waiter.getName() + " la: " + waiter.calculatePay());
+//		System.out.println("Luong cua " + employee.getName() + " la: " + employee.calculatePay());
+//		System.out.println("Luong cua " + manager.getName() + " la: " + manager.calculatePay());
+//		System.out.println("Luong cua " + waiter.getName() + " la: " + waiter.calculatePay());
 	}
 
 }
