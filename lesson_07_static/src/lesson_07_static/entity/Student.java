@@ -1,6 +1,7 @@
 package lesson_07_static.entity;
 
 public class Student {
+	private static int moneyGroup = 0;
 	private static String college;
 	private int id;
 	private String name;
@@ -39,10 +40,28 @@ public class Student {
 		this.name = name;
 	}
 
+	public static int getMoneyGroup() {
+		return moneyGroup;
+	}
+	
 	@Override
 	public String toString() {
 		return "Student [id=" + id + ", name=" + name + ", college ="+ Student.college+"]";
 	}
 
+	public void dongQuy (int amount) {
+		moneyGroup += amount;
+	}
+
+	public void lienHoan (int amount) {
+		moneyGroup -= amount;
+	}
 	
+	public void muaBanhMi (int amount) {
+		moneyGroup -= amount;
+	}
+	
+	public void muaDoDungHT (int amount) {
+		moneyGroup -= amount;
+	}
 }
