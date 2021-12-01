@@ -31,6 +31,7 @@ public class Program {
 			
 			if (scn.hasNextInt()) {
 				int inputFunction = scn.nextInt();
+				
 				switch (inputFunction) {
 				case 1:
 					System.out.println("Bạn đã chọn chức năng 1. Insert news");
