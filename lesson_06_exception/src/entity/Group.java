@@ -1,6 +1,7 @@
 package entity;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 import utils.ScannerUtils;
@@ -48,6 +49,29 @@ public class Group {
 			return null;
 		}
 	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getGroupName() {
+		return groupName;
+	}
+	public void setGroupName(String groupName) {
+		this.groupName = groupName;
+	}
+	public Account[] getAccounts() {
+		return accounts;
+	}
+	public void setAccounts(Account[] accounts) {
+		this.accounts = accounts;
+	}
+	@Override
+	public String toString() {
+		return "Group [id=" + id + ", groupName=" + groupName + ", accounts=" + Arrays.toString(accounts) + "]";
+	}
+	
 	
 	
 }
